@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:aishell:schema:knowledge:bundle:0.1.0",
+  "title": "AIShell KnowledgeBundle manifest",
+  "type": "object", "additionalProperties": false,
+  "required": ["schema_version", "kind", "id", "revision", "status", "publisher_id", "created_at", "minimum_reader_version", "files", "entries", "indexes"],
+  "properties": {
+    "schema_version": {"const": "0.1.0"},
+    "kind": {"const": "KnowledgeBundle"},
+    "id": {"$ref": "urn:aishell:schema:knowledge:common:0.1.0#/$defs/id"},
+    "revision": {"$ref": "urn:aishell:schema:knowledge:common:0.1.0#/$defs/revision"},
+    "status": {"enum": ["draft", "released", "revoked"]},
+    "publisher_id": {"type": "string", "minLength": 1},
+    "created_at": {"type": "string", "format": "date-time"},
+    "expires_at": {"type": "string", "format": "date-time"},
+    "minimum_reader_version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "release_metadata_ref": {"type": "string", "format": "uri"},
+    "files": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["path", "media_type", "bytes", "sha256"],
+        "properties": {
+          "path": {"$ref": "urn:aishell:schema:knowledge:common:0.1.0#/$defs/path"},
+          "media_type": {"type": "string", "minLength": 1},
+          "bytes": {"type": "integer", "minimum": 0},
+          "sha256": {"$ref": "urn:aishell:schema:knowledge:common:0.1.0#/$defs/digest"}
+        }
+      }
+    },
+    "entries": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["kind", "id", "revision", "path"],
+        "properties": {
+          "kind": {"enum": ["Evidence", "Recipe"]},
+          "id": {"$ref": "urn:aishell:schema:knowledge:common:0.1.0#/$defs/id"},
+          "revision": {"$ref": "urn:aishell:schema:knowledge:common:0.1.0#/$defs/revision"},
+          "path": {"$ref": "urn:aishell:schema:knowledge:common:0.1.0#/$defs/path"}
+        }
+      }
+    },
+    "indexes": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["kind", "path", "corpus_revision", "builder_revision", "config"],
+        "properties": {
+          "kind": {"enum": ["lexical", "vector"]},
+          "path": {"$ref": "urn:aishell:schema:knowledge:common:0.1.0#/$defs/path"},
+          "corpus_revision": {"type": "integer", "minimum": 1},
+          "builder_revision": {"type": "string", "minLength": 1},
+          "config": {
+            "type": "object", "additionalProperties": false,
+            "properties": {
+              "tokenizer_revision": {"type": "string", "minLength": 1},
+              "encoder_id": {"type": "string", "minLength": 1},
+              "encoder_revision": {"type": "string", "minLength": 1},
+              "dimension": {"type": "integer", "minimum": 1},
+              "query_template_revision": {"type": "string", "minLength": 1},
+              "document_template_revision": {"type": "string", "minLength": 1},
+              "normalization": {"enum": ["none", "l2"]},
+              "metric": {"enum": ["cosine", "dot", "l2"]},
+              "chunker_revision": {"type": "string", "minLength": 1}
+            }
+          }
+        },
+        "allOf": [
+          {"if": {"properties": {"kind": {"const": "lexical"}}}, "then": {"properties": {"config": {"required": ["tokenizer_revision"]}}}},
+          {"if": {"properties": {"kind": {"const": "vector"}}}, "then": {"properties": {"config": {"required": ["encoder_id", "encoder_revision", "dimension", "query_template_revision", "document_template_revision", "normalization", "metric", "chunker_revision"]}}}}
+        ]
+      }
+    }
+  },
+  "allOf": [{"if": {"properties": {"status": {"const": "released"}}}, "then": {"required": ["expires_at", "release_metadata_ref"]}}]
+}

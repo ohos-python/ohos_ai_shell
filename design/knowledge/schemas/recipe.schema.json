@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:aishell:schema:knowledge:recipe:0.1.0",
+  "title": "AIShell declarative Recipe",
+  "type": "object", "additionalProperties": false,
+  "required": ["schema_version", "kind", "id", "revision", "status", "title", "intent", "applicability", "parameter_schema", "evidence_refs", "dependencies", "artifacts", "steps", "effects", "verification", "failure_policy", "review", "test_records"],
+  "properties": {
+    "schema_version": {"const": "0.1.0"},
+    "kind": {"const": "Recipe"},
+    "id": {"$ref": "urn:aishell:schema:knowledge:common:0.1.0#/$defs/id"},
+    "revision": {"$ref": "urn:aishell:schema:knowledge:common:0.1.0#/$defs/revision"},
+    "status": {"enum": ["candidate", "verified", "deprecated", "revoked"]},
+    "title": {"type": "string", "minLength": 1},
+    "intent": {"enum": ["install_tool", "configure_environment", "inspect_environment", "remove_tool"]},
+    "applicability": {"$ref": "urn:aishell:schema:knowledge:common:0.1.0#/$defs/applicability"},
+    "parameter_schema": {"type": "object", "required": ["type", "properties", "additionalProperties"], "properties": {"type": {"const": "object"}, "properties": {"type": "object"}, "additionalProperties": {"const": false}}},
+    "evidence_refs": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["id", "revision", "role"],
+        "properties": {
+          "id": {"$ref": "urn:aishell:schema:knowledge:common:0.1.0#/$defs/id"},
+          "revision": {"$ref": "urn:aishell:schema:knowledge:common:0.1.0#/$defs/revision"},
+          "role": {"enum": ["rationale", "verification", "limitation", "contradiction"]}
+        }
+      }
+    },
+    "dependencies": {"type": "array", "items": {"$ref": "urn:aishell:schema:knowledge:common:0.1.0#/$defs/reference"}},
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["id", "origin", "sha256", "bytes"],
+        "properties": {
+          "id": {"$ref": "urn:aishell:schema:knowledge:common:0.1.0#/$defs/id"},
+          "origin": {"type": "string", "format": "uri", "pattern": "^https://"},
+          "sha256": {"$ref": "urn:aishell:schema:knowledge:common:0.1.0#/$defs/digest"},
+          "bytes": {"type": "integer", "minimum": 0}
+        }
+      }
+    },
+    "steps": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["step_id", "depends_on", "adapter_id", "action", "arguments", "artifact_refs", "submission", "idempotency", "locks"],
+        "properties": {
+          "step_id": {"$ref": "urn:aishell:schema:knowledge:common:0.1.0#/$defs/id"},
+          "depends_on": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+          "adapter_id": {"$ref": "urn:aishell:schema:knowledge:common:0.1.0#/$defs/id"},
+          "action": {"enum": ["package.install", "package.remove", "environment.set", "artifact.install", "runtime.inspect"]},
+          "artifact_refs": {"type": "array", "uniqueItems": true, "items": {"$ref": "urn:aishell:schema:knowledge:common:0.1.0#/$defs/id"}},
+          "arguments": {
+            "type": "object",
+            "additionalProperties": {
+              "oneOf": [
+                {"type": "object", "additionalProperties": false, "required": ["literal"], "properties": {"literal": {"type": ["string", "number", "boolean"]}}},
+                {"type": "object", "additionalProperties": false, "required": ["parameter"], "properties": {"parameter": {"type": "string", "minLength": 1}}}
+              ]
+            }
+          },
+          "submission": {"const": "user_enter"},
+          "idempotency": {"enum": ["check_before_stage", "not_guaranteed"]},
+          "locks": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}}
+        },
+        "allOf": [{"if": {"properties": {"action": {"const": "artifact.install"}}}, "then": {"properties": {"artifact_refs": {"minItems": 1}}}}]
+      }
+    },
+    "effects": {
+      "type": "object", "additionalProperties": false,
+      "required": ["privilege", "network_origins", "write_scopes"],
+      "properties": {
+        "privilege": {"enum": ["user", "administrator"]},
+        "network_origins": {"type": "array", "uniqueItems": true, "items": {"type": "string", "format": "uri"}},
+        "write_scopes": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}}
+      }
+    },
+    "verification": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["check_id", "mode", "fact", "operator", "expected", "on_unknown"],
+        "properties": {
+          "check_id": {"$ref": "urn:aishell:schema:knowledge:common:0.1.0#/$defs/id"},
+          "mode": {"enum": ["observe_existing_facts", "user_command_required"]},
+          "fact": {"type": "string", "minLength": 1},
+          "operator": {"const": "eq"},
+          "expected": {"oneOf": [{"type": "object", "additionalProperties": false, "required": ["literal"], "properties": {"literal": {"type": ["string", "number", "boolean"]}}}, {"type": "object", "additionalProperties": false, "required": ["parameter"], "properties": {"parameter": {"type": "string", "minLength": 1}}}]},
+          "on_unknown": {"const": "unverified"}
+        }
+      }
+    },
+    "failure_policy": {
+      "type": "object", "additionalProperties": false,
+      "required": ["stop_on_failure", "rollback", "partial_failure_message"],
+      "properties": {
+        "stop_on_failure": {"const": true},
+        "rollback": {"enum": ["manual_only", "not_available"]},
+        "partial_failure_message": {"type": "string", "minLength": 1}
+      }
+    },
+    "review": {"$ref": "urn:aishell:schema:knowledge:common:0.1.0#/$defs/review"},
+    "test_records": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["evidence_ref", "environment", "tested_at", "result"],
+        "properties": {
+          "evidence_ref": {"$ref": "urn:aishell:schema:knowledge:common:0.1.0#/$defs/reference"},
+          "environment": {"$ref": "urn:aishell:schema:knowledge:common:0.1.0#/$defs/environment"},
+          "tested_at": {"type": "string", "format": "date-time"},
+          "result": {"enum": ["passed", "failed"]}
+        }
+      }
+    }
+  },
+  "allOf": [{"if": {"properties": {"status": {"const": "verified"}}}, "then": {"properties": {"review": {"properties": {"status": {"const": "approved"}}}, "applicability": {"properties": {"status": {"const": "specified"}}}, "test_records": {"minItems": 1, "contains": {"properties": {"result": {"const": "passed"}}}}}}}]
+}

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1168" height="540" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1168 540" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1168" height="540"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-540)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1168" height="540" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="20" y="510.0" style="font-family: ReportCJK; font-size: 21px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,1020) scale(1,-1)">图 02  进程模式 A：每页承载自己的 AI 执行单元</text>
+			<text x="20" y="486.0" style="font-family: ReportCJK; font-size: 12px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,972) scale(1,-1)">虚线外框表示 OS 进程边界；真实 Shell 是子进程，AISession 是宿主中的逻辑对象。</text>
+			<rect x="20" y="405" width="1128" height="58" rx="5" ry="5" style="stroke: rgb(68%,74%,80%); stroke-linecap: butt; stroke-width: 1; fill: rgb(96%,96%,98%); fill-rule: evenodd;"/>
+			<text x="34" y="438.0" style="font-family: ReportCJK; font-size: 15px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,876) scale(1,-1)">UI / Supervisor 进程</text>
+			<text x="34" y="417.0" style="font-family: ReportCJK; font-size: 11px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,834) scale(1,-1)">管理页面、创建绑定与路由；不合并 AI 历史</text>
+			<rect x="20" y="104" width="535" height="262" rx="5" ry="5" style="stroke: rgb(68%,74%,80%); stroke-linecap: butt; stroke-width: 1; fill: rgb(96%,96%,98%); fill-rule: evenodd; stroke-dasharray: 5, 4;"/>
+			<text x="34" y="341.0" style="font-family: ReportCJK; font-size: 15px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,682) scale(1,-1)">PageHost A 进程</text>
+			<rect x="40" y="251" width="190" height="68" rx="5" ry="5" style="stroke: rgb(68%,74%,80%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="54" y="296.0" style="font-family: ReportCJK; font-size: 13px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,592) scale(1,-1)">ShellAdapter A</text>
+			<text x="54" y="273.0" style="font-family: ReportCJK; font-size: 11px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,546) scale(1,-1)">PTY / 状态 / 回显校验</text>
+			<rect x="40" y="129" width="190" height="76" rx="5" ry="5" style="stroke: rgb(68%,74%,80%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd; stroke-dasharray: 5, 4;"/>
+			<text x="54" y="182.0" style="font-family: ReportCJK; font-size: 13px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,364) scale(1,-1)">真实 Shell A</text>
+			<text x="54" y="158.0" style="font-family: ReportCJK; font-size: 11px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,316) scale(1,-1)">用户命令子进程</text>
+			<path d="M 135,251 L 135,205 Z" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<polygon points="135 205, 131.3058 212.096, 138.6942 212.096" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1; fill: rgb(15%,41%,59%); fill-rule: evenodd;"/>
+			<rect x="265" y="123" width="270" height="199" rx="5" ry="5" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1; fill: rgb(92%,96%,98%); fill-rule: evenodd;"/>
+			<text x="279" y="297.0" style="font-family: ReportCJK; font-size: 15px;fill: rgb(15%,41%,59%); stroke:none;" transform="translate(0,594) scale(1,-1)">AISession A</text>
+			<text x="279" y="273.0" style="font-family: ReportCJK; font-size: 11px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,546) scale(1,-1)">私有上下文 / 协议端点</text>
+			<rect x="279" y="137" width="242" height="121" rx="5" ry="5" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="293" y="235.0" style="font-family: ReportCJK; font-size: 13px;fill: rgb(15%,41%,59%); stroke:none;" transform="translate(0,470) scale(1,-1)">Scheduler</text>
+			<text x="293" y="214.0" style="font-family: ReportCJK; font-size: 11px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,428) scale(1,-1)">本会话排队、取消与校验</text>
+			<rect x="293" y="149" width="214" height="39" rx="5" ry="5" style="stroke: rgb(19%,45%,39%); stroke-linecap: butt; stroke-width: 1; fill: rgb(92%,96%,94%); fill-rule: evenodd;"/>
+			<text x="307" y="165.0" style="font-family: ReportCJK; font-size: 13px;fill: rgb(19%,45%,39%); stroke:none;" transform="translate(0,330) scale(1,-1)">ModelService</text>
+			<path d="M 230,287 L 265,287 Z" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<polygon points="265 287, 257.904 283.3058, 257.904 290.6942" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1; fill: rgb(15%,41%,59%); fill-rule: evenodd;"/>
+			<path d="M 265,260 L 230,260 Z" style="stroke: rgb(19%,45%,39%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<polygon points="230 260, 237.096 263.6942, 237.096 256.3058" style="stroke: rgb(19%,45%,39%); stroke-linecap: butt; stroke-width: 1; fill: rgb(19%,45%,39%); fill-rule: evenodd;"/>
+			<path d="M 288,405 L 288,366 Z" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<polygon points="288 366, 284.3058 373.096, 291.6942 373.096" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1; fill: rgb(15%,41%,59%); fill-rule: evenodd;"/>
+			<rect x="613" y="104" width="535" height="262" rx="5" ry="5" style="stroke: rgb(68%,74%,80%); stroke-linecap: butt; stroke-width: 1; fill: rgb(96%,96%,98%); fill-rule: evenodd; stroke-dasharray: 5, 4;"/>
+			<text x="627" y="341.0" style="font-family: ReportCJK; font-size: 15px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,682) scale(1,-1)">PageHost B 进程</text>
+			<rect x="633" y="251" width="190" height="68" rx="5" ry="5" style="stroke: rgb(68%,74%,80%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="647" y="296.0" style="font-family: ReportCJK; font-size: 13px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,592) scale(1,-1)">ShellAdapter B</text>
+			<text x="647" y="273.0" style="font-family: ReportCJK; font-size: 11px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,546) scale(1,-1)">PTY / 状态 / 回显校验</text>
+			<rect x="633" y="129" width="190" height="76" rx="5" ry="5" style="stroke: rgb(68%,74%,80%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd; stroke-dasharray: 5, 4;"/>
+			<text x="647" y="182.0" style="font-family: ReportCJK; font-size: 13px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,364) scale(1,-1)">真实 Shell B</text>
+			<text x="647" y="158.0" style="font-family: ReportCJK; font-size: 11px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,316) scale(1,-1)">用户命令子进程</text>
+			<path d="M 728,251 L 728,205 Z" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<polygon points="728 205, 724.3058 212.096, 731.6942 212.096" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1; fill: rgb(15%,41%,59%); fill-rule: evenodd;"/>
+			<rect x="858" y="123" width="270" height="199" rx="5" ry="5" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1; fill: rgb(92%,96%,98%); fill-rule: evenodd;"/>
+			<text x="872" y="297.0" style="font-family: ReportCJK; font-size: 15px;fill: rgb(15%,41%,59%); stroke:none;" transform="translate(0,594) scale(1,-1)">AISession B</text>
+			<text x="872" y="273.0" style="font-family: ReportCJK; font-size: 11px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,546) scale(1,-1)">私有上下文 / 协议端点</text>
+			<rect x="872" y="137" width="242" height="121" rx="5" ry="5" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="886" y="235.0" style="font-family: ReportCJK; font-size: 13px;fill: rgb(15%,41%,59%); stroke:none;" transform="translate(0,470) scale(1,-1)">Scheduler</text>
+			<text x="886" y="214.0" style="font-family: ReportCJK; font-size: 11px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,428) scale(1,-1)">本会话排队、取消与校验</text>
+			<rect x="886" y="149" width="214" height="39" rx="5" ry="5" style="stroke: rgb(19%,45%,39%); stroke-linecap: butt; stroke-width: 1; fill: rgb(92%,96%,94%); fill-rule: evenodd;"/>
+			<text x="900" y="165.0" style="font-family: ReportCJK; font-size: 13px;fill: rgb(19%,45%,39%); stroke:none;" transform="translate(0,330) scale(1,-1)">ModelService</text>
+			<path d="M 823,287 L 858,287 Z" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<polygon points="858 287, 850.904 283.3058, 850.904 290.6942" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1; fill: rgb(15%,41%,59%); fill-rule: evenodd;"/>
+			<path d="M 858,260 L 823,260 Z" style="stroke: rgb(19%,45%,39%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<polygon points="823 260, 830.096 263.6942, 830.096 256.3058" style="stroke: rgb(19%,45%,39%); stroke-linecap: butt; stroke-width: 1; fill: rgb(19%,45%,39%); fill-rule: evenodd;"/>
+			<path d="M 881,405 L 881,366 Z" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<polygon points="881 366, 877.3058 373.096, 884.6942 373.096" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1; fill: rgb(15%,41%,59%); fill-rule: evenodd;"/>
+			<rect x="340" y="15" width="488" height="49" rx="5" ry="5" style="stroke: rgb(19%,45%,39%); stroke-linecap: butt; stroke-width: 1; fill: rgb(92%,96%,94%); fill-rule: evenodd; stroke-dasharray: 5, 4;"/>
+			<text x="354" y="40.0" style="font-family: ReportCJK; font-size: 14px;fill: rgb(19%,45%,39%); stroke:none;" transform="translate(0,80) scale(1,-1)">可选底层算力后端：只处理推理请求</text>
+			<path d="M 400,149 L 400,64 Z" style="stroke: rgb(19%,45%,39%); stroke-linecap: butt; stroke-width: 1.5; stroke-dasharray: 5, 4;"/>
+			<polygon points="400 64, 396.3058 71.09596, 403.6942 71.09596" style="stroke: rgb(19%,45%,39%); stroke-linecap: butt; stroke-width: 1; fill: rgb(19%,45%,39%); fill-rule: evenodd;"/>
+			<path d="M 996,149 L 996,82 Z" style="stroke: rgb(19%,45%,39%); stroke-linecap: butt; stroke-width: 1.5; stroke-dasharray: 5, 4;"/>
+			<path d="M 996,82 L 790,82 Z" style="stroke: rgb(19%,45%,39%); stroke-linecap: butt; stroke-width: 1.5; stroke-dasharray: 5, 4;"/>
+			<path d="M 790,82 L 790,64 Z" style="stroke: rgb(19%,45%,39%); stroke-linecap: butt; stroke-width: 1.5; stroke-dasharray: 5, 4;"/>
+			<polygon points="790 64, 786.3058 71.09596, 793.6942 71.09596" style="stroke: rgb(19%,45%,39%); stroke-linecap: butt; stroke-width: 1; fill: rgb(19%,45%,39%); fill-rule: evenodd;"/>
+			<text x="20" y="49.0" style="font-family: ReportCJK; font-size: 11px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,98) scale(1,-1)">业务 ModelService 在会话内</text>
+			<text x="20" y="32.5" style="font-family: ReportCJK; font-size: 11px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,65) scale(1,-1)">虚线调用仅指可选算力复用</text>
+		</g>
+	</g>
+</svg>

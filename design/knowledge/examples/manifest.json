@@ -1,0 +1,45 @@
+{
+  "schema_version": "0.1.0",
+  "kind": "KnowledgeBundle",
+  "id": "demo.bundle.core",
+  "revision": 1,
+  "status": "draft",
+  "publisher_id": "fixture-author",
+  "created_at": "2026-09-27T00:00:00Z",
+  "minimum_reader_version": "0.1.0",
+  "files": [
+    {
+      "path": "sources/demo-guide.txt",
+      "media_type": "text/plain",
+      "bytes": 236,
+      "sha256": "8bb5ce6325450af2bf11a18ef3ef6a64404a0d06d9a06d9e1d82fb251da2bf52"
+    },
+    {
+      "path": "evidence/demo-guide.json",
+      "media_type": "application/json",
+      "bytes": 1300,
+      "sha256": "82811d16e851d2b709bf7f751fcd4786f00a4551820bd1cee16857b0bd8d8b9f"
+    },
+    {
+      "path": "recipes/demo-runtime.json",
+      "media_type": "application/json",
+      "bytes": 1935,
+      "sha256": "449fc8820406d60238357903335604ea67174da97201b9e576d0e07a4b75a20f"
+    }
+  ],
+  "entries": [
+    {
+      "kind": "Evidence",
+      "id": "demo.evidence.runtime-guide",
+      "revision": 1,
+      "path": "evidence/demo-guide.json"
+    },
+    {
+      "kind": "Recipe",
+      "id": "demo.recipe.install-runtime",
+      "revision": 1,
+      "path": "recipes/demo-runtime.json"
+    }
+  ],
+  "indexes": []
+}

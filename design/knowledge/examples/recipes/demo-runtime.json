@@ -1,0 +1,49 @@
+{
+  "schema_version": "0.1.0",
+  "kind": "Recipe",
+  "id": "demo.recipe.install-runtime",
+  "revision": 1,
+  "status": "candidate",
+  "title": "安装演示运行时：仅用于结构校验",
+  "intent": "install_tool",
+  "applicability": {
+    "status": "specified",
+    "conditions": [
+      {"fact": "os.family", "operator": "eq", "values": ["example-os"], "on_unknown": "need_context"},
+      {"fact": "cpu.arch", "operator": "eq", "values": ["example-arch"], "on_unknown": "need_context"},
+      {"fact": "capability.demo-manager", "operator": "eq", "values": [true], "on_unknown": "need_context"}
+    ]
+  },
+  "parameter_schema": {
+    "type": "object",
+    "properties": {"version": {"type": "string", "enum": ["1.0.0"]}},
+    "required": ["version"],
+    "additionalProperties": false
+  },
+  "evidence_refs": [{"id": "demo.evidence.runtime-guide", "revision": 1, "role": "rationale"}],
+  "dependencies": [],
+  "artifacts": [],
+  "steps": [{
+    "step_id": "install.runtime",
+    "depends_on": [],
+    "adapter_id": "demo.package-manager",
+    "action": "package.install",
+    "arguments": {"package": {"literal": "demo-runtime"}, "version": {"parameter": "version"}},
+    "artifact_refs": [],
+    "submission": "user_enter",
+    "idempotency": "check_before_stage",
+    "locks": ["package-manager:demo"]
+  }],
+  "effects": {"privilege": "user", "network_origins": ["https://packages.example.invalid"], "write_scopes": ["user.runtime-prefix"]},
+  "verification": [{
+    "check_id": "verify.runtime-version",
+    "mode": "user_command_required",
+    "fact": "runtime.demo.version",
+    "operator": "eq",
+    "expected": {"parameter": "version"},
+    "on_unknown": "unverified"
+  }],
+  "failure_policy": {"stop_on_failure": true, "rollback": "not_available", "partial_failure_message": "停止后续步骤，展示可能的部分变更；没有自动回滚保证。"},
+  "review": {"status": "unreviewed"},
+  "test_records": []
+}

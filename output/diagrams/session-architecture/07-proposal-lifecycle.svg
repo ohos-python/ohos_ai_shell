@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1168" height="540" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1168 540" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1168" height="540"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-540)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1168" height="540" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="20" y="510.0" style="font-family: ReportCJK; font-size: 21px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,1020) scale(1,-1)">图 07  建议生命周期：取消、过期与恢复都不隐含执行</text>
+			<text x="20" y="486.0" style="font-family: ReportCJK; font-size: 12px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,972) scale(1,-1)">状态归属本会话；重建后换 binding_epoch，旧结果和旧批准不得自动重放。</text>
+			<rect x="20" y="337" width="208" height="80" rx="5" ry="5" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1; fill: rgb(92%,96%,98%); fill-rule: evenodd;"/>
+			<text x="34" y="392.0" style="font-family: ReportCJK; font-size: 15px;fill: rgb(15%,41%,59%); stroke:none;" transform="translate(0,784) scale(1,-1)">created</text>
+			<text x="34" y="370.0" style="font-family: ReportCJK; font-size: 12px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,740) scale(1,-1)">收到上下文</text>
+			<rect x="250" y="337" width="208" height="80" rx="5" ry="5" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1; fill: rgb(92%,96%,98%); fill-rule: evenodd;"/>
+			<text x="264" y="392.0" style="font-family: ReportCJK; font-size: 15px;fill: rgb(15%,41%,59%); stroke:none;" transform="translate(0,784) scale(1,-1)">queued</text>
+			<text x="264" y="370.0" style="font-family: ReportCJK; font-size: 12px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,740) scale(1,-1)">本会话排队</text>
+			<rect x="480" y="337" width="208" height="80" rx="5" ry="5" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1; fill: rgb(92%,96%,98%); fill-rule: evenodd;"/>
+			<text x="494" y="392.0" style="font-family: ReportCJK; font-size: 15px;fill: rgb(15%,41%,59%); stroke:none;" transform="translate(0,784) scale(1,-1)">analyzing</text>
+			<text x="494" y="370.0" style="font-family: ReportCJK; font-size: 12px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,740) scale(1,-1)">模型与检索</text>
+			<rect x="710" y="337" width="208" height="80" rx="5" ry="5" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1; fill: rgb(92%,96%,98%); fill-rule: evenodd;"/>
+			<text x="724" y="392.0" style="font-family: ReportCJK; font-size: 15px;fill: rgb(15%,41%,59%); stroke:none;" transform="translate(0,784) scale(1,-1)">validated</text>
+			<text x="724" y="370.0" style="font-family: ReportCJK; font-size: 12px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,740) scale(1,-1)">方案通过校验</text>
+			<rect x="940" y="337" width="208" height="80" rx="5" ry="5" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1; fill: rgb(92%,96%,98%); fill-rule: evenodd;"/>
+			<text x="954" y="392.0" style="font-family: ReportCJK; font-size: 15px;fill: rgb(15%,41%,59%); stroke:none;" transform="translate(0,784) scale(1,-1)">staged</text>
+			<text x="954" y="370.0" style="font-family: ReportCJK; font-size: 12px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,740) scale(1,-1)">已回显 / 未执行</text>
+			<path d="M 228,377 L 250,377 Z" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<polygon points="250 377, 242.904 373.3058, 242.904 380.6942" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1; fill: rgb(15%,41%,59%); fill-rule: evenodd;"/>
+			<path d="M 458,377 L 480,377 Z" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<polygon points="480 377, 472.904 373.3058, 472.904 380.6942" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1; fill: rgb(15%,41%,59%); fill-rule: evenodd;"/>
+			<path d="M 688,377 L 710,377 Z" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<polygon points="710 377, 702.904 373.3058, 702.904 380.6942" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1; fill: rgb(15%,41%,59%); fill-rule: evenodd;"/>
+			<path d="M 918,377 L 940,377 Z" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<polygon points="940 377, 932.904 373.3058, 932.904 380.6942" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1; fill: rgb(15%,41%,59%); fill-rule: evenodd;"/>
+			<rect x="250" y="156" width="208" height="86" rx="5" ry="5" style="stroke: rgb(68%,74%,80%); stroke-linecap: butt; stroke-width: 1; fill: rgb(96%,96%,98%); fill-rule: evenodd;"/>
+			<text x="264" y="217.0" style="font-family: ReportCJK; font-size: 15px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,434) scale(1,-1)">cancelled</text>
+			<text x="264" y="195.0" style="font-family: ReportCJK; font-size: 12px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,390) scale(1,-1)">取消本会话任务</text>
+			<text x="264" y="176.4" style="font-family: ReportCJK; font-size: 12px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,352) scale(1,-1)">不撤销其他页请求</text>
+			<rect x="570" y="156" width="270" height="86" rx="5" ry="5" style="stroke: rgb(59%,40%,13%); stroke-linecap: butt; stroke-width: 1; fill: rgb(98%,95%,90%); fill-rule: evenodd;"/>
+			<text x="584" y="217.0" style="font-family: ReportCJK; font-size: 15px;fill: rgb(59%,40%,13%); stroke:none;" transform="translate(0,434) scale(1,-1)">stale / rejected</text>
+			<text x="584" y="195.0" style="font-family: ReportCJK; font-size: 12px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,390) scale(1,-1)">环境、草稿或绑定已变化</text>
+			<text x="584" y="176.4" style="font-family: ReportCJK; font-size: 12px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,352) scale(1,-1)">不填入、不自动重试</text>
+			<rect x="940" y="162" width="208" height="80" rx="5" ry="5" style="stroke: rgb(19%,45%,39%); stroke-linecap: butt; stroke-width: 1; fill: rgb(92%,96%,94%); fill-rule: evenodd;"/>
+			<text x="954" y="217.0" style="font-family: ReportCJK; font-size: 15px;fill: rgb(19%,45%,39%); stroke:none;" transform="translate(0,434) scale(1,-1)">running</text>
+			<text x="954" y="195.0" style="font-family: ReportCJK; font-size: 12px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,390) scale(1,-1)">用户已提交命令</text>
+			<rect x="940" y="26" width="208" height="80" rx="5" ry="5" style="stroke: rgb(19%,45%,39%); stroke-linecap: butt; stroke-width: 1; fill: rgb(92%,96%,94%); fill-rule: evenodd;"/>
+			<text x="954" y="81.0" style="font-family: ReportCJK; font-size: 15px;fill: rgb(19%,45%,39%); stroke:none;" transform="translate(0,162) scale(1,-1)">finished</text>
+			<text x="954" y="59.0" style="font-family: ReportCJK; font-size: 12px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,118) scale(1,-1)">记录结果与验证</text>
+			<text x="954" y="40.4" style="font-family: ReportCJK; font-size: 12px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,80) scale(1,-1)">不自动追加执行</text>
+			<path d="M 354,337 L 354,242 Z" style="stroke: rgb(32%,41%,48%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<polygon points="354 242, 350.3058 249.096, 357.6942 249.096" style="stroke: rgb(32%,41%,48%); stroke-linecap: butt; stroke-width: 1; fill: rgb(32%,41%,48%); fill-rule: evenodd;"/>
+			<text x="365" y="287.0" style="font-family: ReportCJK; font-size: 11px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,574) scale(1,-1)">取消请求</text>
+			<path d="M 814,337 L 814,287 Z" style="stroke: rgb(59%,40%,13%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<path d="M 814,287 L 705,287 Z" style="stroke: rgb(59%,40%,13%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<path d="M 705,287 L 705,242 Z" style="stroke: rgb(59%,40%,13%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<polygon points="705 242, 701.3058 249.096, 708.6942 249.096" style="stroke: rgb(59%,40%,13%); stroke-linecap: butt; stroke-width: 1; fill: rgb(59%,40%,13%); fill-rule: evenodd;"/>
+			<text x="573" y="268.0" style="font-family: ReportCJK; font-size: 11px;fill: rgb(59%,40%,13%); stroke:none;" transform="translate(0,536) scale(1,-1)">校验失败 / 变化</text>
+			<path d="M 1044,337 L 1044,242 Z" style="stroke: rgb(59%,40%,13%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<polygon points="1044 242, 1040.306 249.096, 1047.694 249.096" style="stroke: rgb(59%,40%,13%); stroke-linecap: butt; stroke-width: 1; fill: rgb(59%,40%,13%); fill-rule: evenodd;"/>
+			<text x="952" y="288.0" style="font-family: ReportCJK; font-size: 11px;fill: rgb(59%,40%,13%); stroke:none;" transform="translate(0,576) scale(1,-1)">用户 Enter</text>
+			<path d="M 1044,162 L 1044,106 Z" style="stroke: rgb(19%,45%,39%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<polygon points="1044 106, 1040.306 113.096, 1047.694 113.096" style="stroke: rgb(19%,45%,39%); stroke-linecap: butt; stroke-width: 1; fill: rgb(19%,45%,39%); fill-rule: evenodd;"/>
+			<rect x="20" y="26" width="820" height="80" rx="5" ry="5" style="stroke: rgb(68%,74%,80%); stroke-linecap: butt; stroke-width: 1; fill: rgb(96%,96%,98%); fill-rule: evenodd;"/>
+			<text x="34" y="81.0" style="font-family: ReportCJK; font-size: 15px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,162) scale(1,-1)">关闭 / 清空 / 重建</text>
+			<text x="34" y="59.0" style="font-family: ReportCJK; font-size: 12px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,118) scale(1,-1)">取消在途请求，清理本会话私有状态；重建时更新绑定代次。</text>
+			<text x="34" y="40.4" style="font-family: ReportCJK; font-size: 12px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,80) scale(1,-1)">任何未执行建议都不能因恢复历史而被自动提交。</text>
+			<text x="20" y="444.0" style="font-family: ReportCJK; font-size: 12px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,888) scale(1,-1)">已回显的建议也可由用户清除；取消、过期不是执行成功或事务回滚。</text>
+		</g>
+	</g>
+</svg>

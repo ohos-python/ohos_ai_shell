@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1168" height="540" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1168 540" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1168" height="540"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-540)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1168" height="540" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="20" y="510.0" style="font-family: ReportCJK; font-size: 21px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,1020) scale(1,-1)">图 04  线程与异步任务：状态由单一执行单元拥有</text>
+			<text x="20" y="486.0" style="font-family: ReportCJK; font-size: 12px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,972) scale(1,-1)">这是推荐的执行模型，不是固定线程数量；同一线程可承载多个独立 Session actor。</text>
+			<rect x="20" y="93" width="300" height="355" rx="5" ry="5" style="stroke: rgb(68%,74%,80%); stroke-linecap: butt; stroke-width: 1; fill: rgb(96%,96%,98%); fill-rule: evenodd;"/>
+			<text x="34" y="423.0" style="font-family: ReportCJK; font-size: 15px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,846) scale(1,-1)">Shell I/O 执行单元</text>
+			<rect x="40" y="309" width="260" height="85" rx="5" ry="5" style="stroke: rgb(68%,74%,80%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="54" y="369.0" style="font-family: ReportCJK; font-size: 15px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,738) scale(1,-1)">唯一状态所有者</text>
+			<text x="54" y="347.0" style="font-family: ReportCJK; font-size: 12px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,694) scale(1,-1)">PTY / 前台进程 / cwd</text>
+			<text x="54" y="328.4" style="font-family: ReportCJK; font-size: 12px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,656) scale(1,-1)">提示符代次 / 输入缓冲区</text>
+			<rect x="40" y="153" width="260" height="110" rx="5" ry="5" style="stroke: rgb(19%,45%,39%); stroke-linecap: butt; stroke-width: 1; fill: rgb(92%,96%,94%); fill-rule: evenodd;"/>
+			<text x="54" y="238.0" style="font-family: ReportCJK; font-size: 15px;fill: rgb(19%,45%,39%); stroke:none;" transform="translate(0,476) scale(1,-1)">串行检查与回显</text>
+			<text x="54" y="216.0" style="font-family: ReportCJK; font-size: 12px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,432) scale(1,-1)">核对版本后原子填入</text>
+			<text x="54" y="197.4" style="font-family: ReportCJK; font-size: 12px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,394) scale(1,-1)">只改文本，不调用提交</text>
+			<text x="54" y="178.8" style="font-family: ReportCJK; font-size: 12px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,357) scale(1,-1)">不等待模型推理</text>
+			<rect x="372" y="93" width="450" height="355" rx="5" ry="5" style="stroke: rgb(68%,74%,80%); stroke-linecap: butt; stroke-width: 1; fill: rgb(96%,96%,98%); fill-rule: evenodd;"/>
+			<text x="386" y="423.0" style="font-family: ReportCJK; font-size: 15px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,846) scale(1,-1)">AI 执行环境：事件循环 / actor</text>
+			<rect x="392" y="113" width="410" height="288" rx="5" ry="5" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1; fill: rgb(92%,96%,98%); fill-rule: evenodd;"/>
+			<text x="406" y="376.0" style="font-family: ReportCJK; font-size: 15px;fill: rgb(15%,41%,59%); stroke:none;" transform="translate(0,752) scale(1,-1)">AISession A</text>
+			<rect x="411" y="134" width="372" height="216" rx="5" ry="5" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="425" y="325.0" style="font-family: ReportCJK; font-size: 15px;fill: rgb(15%,41%,59%); stroke:none;" transform="translate(0,650) scale(1,-1)">Scheduler A</text>
+			<rect x="430" y="234" width="334" height="70" rx="5" ry="5" style="stroke: rgb(68%,74%,80%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="444" y="280.0" style="font-family: ReportCJK; font-size: 14px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,560) scale(1,-1)">私有有界队列</text>
+			<text x="444" y="257.0" style="font-family: ReportCJK; font-size: 12px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,514) scale(1,-1)">串行状态变更 / 预算 / 取消</text>
+			<rect x="430" y="152" width="334" height="54" rx="5" ry="5" style="stroke: rgb(19%,45%,39%); stroke-linecap: butt; stroke-width: 1; fill: rgb(92%,96%,94%); fill-rule: evenodd;"/>
+			<text x="444" y="183.0" style="font-family: ReportCJK; font-size: 13px;fill: rgb(19%,45%,39%); stroke:none;" transform="translate(0,366) scale(1,-1)">ModelService A</text>
+			<text x="444" y="161.0" style="font-family: ReportCJK; font-size: 10px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,322) scale(1,-1)">异步请求 / 结果回调</text>
+			<rect x="872" y="93" width="276" height="355" rx="5" ry="5" style="stroke: rgb(19%,45%,39%); stroke-linecap: butt; stroke-width: 1; fill: rgb(92%,96%,94%); fill-rule: evenodd; stroke-dasharray: 5, 4;"/>
+			<text x="886" y="423.0" style="font-family: ReportCJK; font-size: 15px;fill: rgb(19%,45%,39%); stroke:none;" transform="translate(0,846) scale(1,-1)">可选算力 / 网络后端</text>
+			<rect x="892" y="281" width="236" height="93" rx="5" ry="5" style="stroke: rgb(19%,45%,39%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="906" y="349.0" style="font-family: ReportCJK; font-size: 15px;fill: rgb(19%,45%,39%); stroke:none;" transform="translate(0,698) scale(1,-1)">推理执行</text>
+			<text x="906" y="327.0" style="font-family: ReportCJK; font-size: 12px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,654) scale(1,-1)">本地模型进程</text>
+			<text x="906" y="308.4" style="font-family: ReportCJK; font-size: 12px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,616) scale(1,-1)">或经授权云端请求</text>
+			<text x="892" y="227.0" style="font-family: ReportCJK; font-size: 13px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,454) scale(1,-1)">每个请求独立身份与缓存。</text>
+			<text x="892" y="207.5" style="font-family: ReportCJK; font-size: 13px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,415) scale(1,-1)">超时只取消相关请求，</text>
+			<text x="892" y="188.0" style="font-family: ReportCJK; font-size: 13px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,376) scale(1,-1)">不阻塞普通 Shell。</text>
+			<path d="M 320,310 L 372,310 Z" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<polygon points="372 310, 364.904 306.3058, 364.904 313.6942" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1; fill: rgb(15%,41%,59%); fill-rule: evenodd;"/>
+			<text x="330" y="321.0" style="font-family: ReportCJK; font-size: 11px;fill: rgb(15%,41%,59%); stroke:none;" transform="translate(0,642) scale(1,-1)">消息</text>
+			<path d="M 372,219 L 320,219 Z" style="stroke: rgb(19%,45%,39%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<polygon points="320 219, 327.096 222.6942, 327.096 215.3058" style="stroke: rgb(19%,45%,39%); stroke-linecap: butt; stroke-width: 1; fill: rgb(19%,45%,39%); fill-rule: evenodd;"/>
+			<path d="M 783,189 L 872,189 Z" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<polygon points="872 189, 864.904 185.3058, 864.904 192.6942" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1; fill: rgb(15%,41%,59%); fill-rule: evenodd;"/>
+			<text x="810" y="205.0" style="font-family: ReportCJK; font-size: 11px;fill: rgb(15%,41%,59%); stroke:none;" transform="translate(0,410) scale(1,-1)">异步调用</text>
+			<path d="M 872,150 L 783,150 Z" style="stroke: rgb(19%,45%,39%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<polygon points="783 150, 790.096 153.6942, 790.096 146.3058" style="stroke: rgb(19%,45%,39%); stroke-linecap: butt; stroke-width: 1; fill: rgb(19%,45%,39%); fill-rule: evenodd;"/>
+			<text x="20" y="53.0" style="font-family: ReportCJK; font-size: 13px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,106) scale(1,-1)">线程不是安全边界：同进程对象靠逻辑隔离；进程级故障按部署模式影响本页或多个 AI 会话。</text>
+			<text x="20" y="23.0" style="font-family: ReportCJK; font-size: 12px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,46) scale(1,-1)">不允许 AI 持有终端写入句柄；会话调度器不与其他会话共享任务队列或取消状态。</text>
+		</g>
+	</g>
+</svg>

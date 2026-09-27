@@ -1,0 +1,3 @@
+Synthetic fixture only; not a real Harmony adaptation guide.
+On example-os, an imaginary demo package manager can request demo-runtime version 1.0.0.
+No command, binary, adapter, compatibility result, or installation has been verified.

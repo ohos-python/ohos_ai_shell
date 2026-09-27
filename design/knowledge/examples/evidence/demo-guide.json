@@ -1,0 +1,42 @@
+{
+  "schema_version": "0.1.0",
+  "kind": "Evidence",
+  "id": "demo.evidence.runtime-guide",
+  "revision": 1,
+  "evidence_type": "guide",
+  "title": "演示证据：非真实社区资料",
+  "visibility": {"scope": "public"},
+  "content": "Synthetic fixture only; not a real Harmony adaptation guide.\nOn example-os, an imaginary demo package manager can request demo-runtime version 1.0.0.\nNo command, binary, adapter, compatibility result, or installation has been verified.\n",
+  "source": {
+    "uri": "urn:aishell:fixture:demo-guide",
+    "revision": "fixture-1",
+    "locator": "lines 1-3",
+    "captured_at": "2026-09-27T00:00:00Z",
+    "captured_by": "fixture-author",
+    "snapshot_path": "sources/demo-guide.txt",
+    "sha256": "8bb5ce6325450af2bf11a18ef3ef6a64404a0d06d9a06d9e1d82fb251da2bf52",
+    "rights_status": "example_only"
+  },
+  "applicability": {
+    "status": "specified",
+    "conditions": [
+      {
+        "fact": "os.family",
+        "operator": "eq",
+        "values": [
+          "example-os"
+        ],
+        "on_unknown": "need_context"
+      }
+    ]
+  },
+  "claims": [
+    {
+      "text": "此资料仅演示字段关系，不支持任何真实设备上的安装结论。",
+      "status": "source_statement"
+    }
+  ],
+  "review": {
+    "status": "unreviewed"
+  }
+}

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1168" height="540" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1168 540" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1168" height="540"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-540)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1168" height="540" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="20" y="510.0" style="font-family: ReportCJK; font-size: 21px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,1020) scale(1,-1)">图 03  进程模式 B：多个页面共享 AIWorker</text>
+			<text x="20" y="486.0" style="font-family: ReportCJK; font-size: 12px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,972) scale(1,-1)">共享的是进程，不默认共享对话；每个 AISession 内仍有自己的 Scheduler 与 ModelService。</text>
+			<rect x="20" y="406" width="1128" height="56" rx="5" ry="5" style="stroke: rgb(68%,74%,80%); stroke-linecap: butt; stroke-width: 1; fill: rgb(96%,96%,98%); fill-rule: evenodd;"/>
+			<text x="34" y="437.0" style="font-family: ReportCJK; font-size: 15px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,874) scale(1,-1)">UI / Supervisor</text>
+			<text x="34" y="416.0" style="font-family: ReportCJK; font-size: 11px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,832) scale(1,-1)">维护 page → shell_session → ai_session → worker 的可信绑定</text>
+			<rect x="20" y="252" width="285" height="108" rx="5" ry="5" style="stroke: rgb(68%,74%,80%); stroke-linecap: butt; stroke-width: 1; fill: rgb(96%,96%,98%); fill-rule: evenodd; stroke-dasharray: 5, 4;"/>
+			<text x="34" y="335.0" style="font-family: ReportCJK; font-size: 15px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,670) scale(1,-1)">PageHost A 进程</text>
+			<text x="34" y="308.0" style="font-family: ReportCJK; font-size: 12px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,616) scale(1,-1)">ShellAdapter A / 专属 IPC</text>
+			<text x="34" y="282.0" style="font-family: ReportCJK; font-size: 12px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,564) scale(1,-1)">真实 Shell A 子进程</text>
+			<rect x="20" y="99" width="285" height="108" rx="5" ry="5" style="stroke: rgb(68%,74%,80%); stroke-linecap: butt; stroke-width: 1; fill: rgb(96%,96%,98%); fill-rule: evenodd; stroke-dasharray: 5, 4;"/>
+			<text x="34" y="182.0" style="font-family: ReportCJK; font-size: 15px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,364) scale(1,-1)">PageHost B 进程</text>
+			<text x="34" y="155.0" style="font-family: ReportCJK; font-size: 12px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,310) scale(1,-1)">ShellAdapter B / 专属 IPC</text>
+			<text x="34" y="129.0" style="font-family: ReportCJK; font-size: 12px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,258) scale(1,-1)">真实 Shell B 子进程</text>
+			<rect x="370" y="76" width="778" height="298" rx="5" ry="5" style="stroke: rgb(68%,74%,80%); stroke-linecap: butt; stroke-width: 1; fill: rgb(96%,96%,98%); fill-rule: evenodd; stroke-dasharray: 5, 4;"/>
+			<text x="384" y="349.0" style="font-family: ReportCJK; font-size: 15px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,698) scale(1,-1)">共享 AIWorker 进程：只承载、注册与路由</text>
+			<rect x="392" y="94" width="355" height="215" rx="5" ry="5" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1; fill: rgb(92%,96%,98%); fill-rule: evenodd;"/>
+			<text x="406" y="284.0" style="font-family: ReportCJK; font-size: 15px;fill: rgb(15%,41%,59%); stroke:none;" transform="translate(0,568) scale(1,-1)">AISession A</text>
+			<text x="406" y="260.0" style="font-family: ReportCJK; font-size: 11px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,520) scale(1,-1)">私有上下文 / 协议端点</text>
+			<rect x="406" y="108" width="327" height="137" rx="5" ry="5" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="420" y="222.0" style="font-family: ReportCJK; font-size: 13px;fill: rgb(15%,41%,59%); stroke:none;" transform="translate(0,444) scale(1,-1)">Scheduler</text>
+			<text x="420" y="201.0" style="font-family: ReportCJK; font-size: 11px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,402) scale(1,-1)">本会话排队、取消与校验</text>
+			<rect x="420" y="120" width="299" height="39" rx="5" ry="5" style="stroke: rgb(19%,45%,39%); stroke-linecap: butt; stroke-width: 1; fill: rgb(92%,96%,94%); fill-rule: evenodd;"/>
+			<text x="434" y="136.0" style="font-family: ReportCJK; font-size: 13px;fill: rgb(19%,45%,39%); stroke:none;" transform="translate(0,272) scale(1,-1)">ModelService</text>
+			<rect x="771" y="94" width="355" height="215" rx="5" ry="5" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1; fill: rgb(92%,96%,98%); fill-rule: evenodd;"/>
+			<text x="785" y="284.0" style="font-family: ReportCJK; font-size: 15px;fill: rgb(15%,41%,59%); stroke:none;" transform="translate(0,568) scale(1,-1)">AISession B</text>
+			<text x="785" y="260.0" style="font-family: ReportCJK; font-size: 11px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,520) scale(1,-1)">私有上下文 / 协议端点</text>
+			<rect x="785" y="108" width="327" height="137" rx="5" ry="5" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="799" y="222.0" style="font-family: ReportCJK; font-size: 13px;fill: rgb(15%,41%,59%); stroke:none;" transform="translate(0,444) scale(1,-1)">Scheduler</text>
+			<text x="799" y="201.0" style="font-family: ReportCJK; font-size: 11px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,402) scale(1,-1)">本会话排队、取消与校验</text>
+			<rect x="799" y="120" width="299" height="39" rx="5" ry="5" style="stroke: rgb(19%,45%,39%); stroke-linecap: butt; stroke-width: 1; fill: rgb(92%,96%,94%); fill-rule: evenodd;"/>
+			<text x="813" y="136.0" style="font-family: ReportCJK; font-size: 13px;fill: rgb(19%,45%,39%); stroke:none;" transform="translate(0,272) scale(1,-1)">ModelService</text>
+			<path d="M 305,309 L 340,309 Z" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<path d="M 340,309 L 340,271 Z" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<path d="M 340,271 L 392,271 Z" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<polygon points="392 271, 384.904 267.3058, 384.904 274.6942" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1; fill: rgb(15%,41%,59%); fill-rule: evenodd;"/>
+			<text x="312" y="324.0" style="font-family: ReportCJK; font-size: 11px;fill: rgb(15%,41%,59%); stroke:none;" transform="translate(0,648) scale(1,-1)">A 通道</text>
+			<path d="M 305,150 L 345,150 Z" style="stroke: rgb(19%,45%,39%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<path d="M 345,150 L 345,84 Z" style="stroke: rgb(19%,45%,39%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<path d="M 345,84 L 947,84 Z" style="stroke: rgb(19%,45%,39%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<path d="M 947,84 L 947,94 Z" style="stroke: rgb(19%,45%,39%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<polygon points="947 94, 950.6942 86.90404, 943.3058 86.90404" style="stroke: rgb(19%,45%,39%); stroke-linecap: butt; stroke-width: 1; fill: rgb(19%,45%,39%); fill-rule: evenodd;"/>
+			<text x="404" y="51.0" style="font-family: ReportCJK; font-size: 11px;fill: rgb(19%,45%,39%); stroke:none;" transform="translate(0,102) scale(1,-1)">B 通道：只路由至 B</text>
+			<path d="M 161,406 L 161,360 Z" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<polygon points="161 360, 157.3058 367.096, 164.6942 367.096" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1; fill: rgb(15%,41%,59%); fill-rule: evenodd;"/>
+			<path d="M 820,406 L 820,374 Z" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<polygon points="820 374, 816.3058 381.096, 823.6942 381.096" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1; fill: rgb(15%,41%,59%); fill-rule: evenodd;"/>
+			<text x="20" y="29.0" style="font-family: ReportCJK; font-size: 12px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,58) scale(1,-1)">ModelService 各自选择本地或云端后端；共享 AIWorker 内不设置与 AISession 平级的业务调度器。</text>
+		</g>
+	</g>
+</svg>

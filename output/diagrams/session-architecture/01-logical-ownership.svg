@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1168" height="540" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1168 540" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1168" height="540"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-540)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1168" height="540" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="20" y="510.0" style="font-family: ReportCJK; font-size: 21px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,1020) scale(1,-1)">图 01  逻辑归属：模型服务在 AISession 内部</text>
+			<text x="20" y="486.0" style="font-family: ReportCJK; font-size: 12px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,972) scale(1,-1)">嵌套框表示归属，箭头表示消息或调用；不表示一个框就对应一个进程或线程。</text>
+			<rect x="20" y="83" width="300" height="365" rx="5" ry="5" style="stroke: rgb(68%,74%,80%); stroke-linecap: butt; stroke-width: 1; fill: rgb(96%,96%,98%); fill-rule: evenodd;"/>
+			<text x="34" y="423.0" style="font-family: ReportCJK; font-size: 15px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,846) scale(1,-1)">ShellSession</text>
+			<rect x="40" y="312" width="260" height="82" rx="5" ry="5" style="stroke: rgb(68%,74%,80%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="54" y="369.0" style="font-family: ReportCJK; font-size: 15px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,738) scale(1,-1)">Shell 状态与协议端点</text>
+			<text x="54" y="347.0" style="font-family: ReportCJK; font-size: 12px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,694) scale(1,-1)">命令 / 输出 / 目录 / 输入版本</text>
+			<rect x="40" y="200" width="260" height="76" rx="5" ry="5" style="stroke: rgb(68%,74%,80%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="54" y="251.0" style="font-family: ReportCJK; font-size: 15px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,502) scale(1,-1)">普通命令输入行</text>
+			<text x="54" y="229.0" style="font-family: ReportCJK; font-size: 12px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,458) scale(1,-1)">仅回显文本，不附带回车</text>
+			<rect x="40" y="103" width="260" height="62" rx="5" ry="5" style="stroke: rgb(19%,45%,39%); stroke-linecap: butt; stroke-width: 1; fill: rgb(92%,96%,94%); fill-rule: evenodd;"/>
+			<text x="54" y="140.0" style="font-family: ReportCJK; font-size: 15px;fill: rgb(19%,45%,39%); stroke:none;" transform="translate(0,280) scale(1,-1)">用户 Enter 后执行</text>
+			<text x="54" y="118.0" style="font-family: ReportCJK; font-size: 12px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,236) scale(1,-1)">原始程序输出留在主 Shell</text>
+			<path d="M 170,200 L 170,165 Z" style="stroke: rgb(19%,45%,39%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<polygon points="170 165, 166.3058 172.096, 173.6942 172.096" style="stroke: rgb(19%,45%,39%); stroke-linecap: butt; stroke-width: 1; fill: rgb(19%,45%,39%); fill-rule: evenodd;"/>
+			<rect x="400" y="83" width="748" height="375" rx="5" ry="5" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1; fill: rgb(92%,96%,98%); fill-rule: evenodd;"/>
+			<text x="414" y="433.0" style="font-family: ReportCJK; font-size: 15px;fill: rgb(15%,41%,59%); stroke:none;" transform="translate(0,866) scale(1,-1)">AISession：唯一上下文、权限与生命周期所有者</text>
+			<rect x="420" y="313" width="220" height="90" rx="5" ry="5" style="stroke: rgb(68%,74%,80%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="434" y="378.0" style="font-family: ReportCJK; font-size: 15px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,756) scale(1,-1)">ContextStore</text>
+			<text x="434" y="356.0" style="font-family: ReportCJK; font-size: 12px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,712) scale(1,-1)">本页历史、事实、知识引用</text>
+			<rect x="420" y="180" width="220" height="80" rx="5" ry="5" style="stroke: rgb(68%,74%,80%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="434" y="235.0" style="font-family: ReportCJK; font-size: 15px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,470) scale(1,-1)">ProtocolEndpoint</text>
+			<text x="434" y="213.0" style="font-family: ReportCJK; font-size: 12px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,426) scale(1,-1)">接收上下文 / 返回候选命令</text>
+			<rect x="672" y="103" width="456" height="300" rx="5" ry="5" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="686" y="378.0" style="font-family: ReportCJK; font-size: 15px;fill: rgb(15%,41%,59%); stroke:none;" transform="translate(0,756) scale(1,-1)">Scheduler：本会话任务编排</text>
+			<rect x="692" y="280" width="195" height="77" rx="5" ry="5" style="stroke: rgb(68%,74%,80%); stroke-linecap: butt; stroke-width: 1; fill: rgb(96%,96%,98%); fill-rule: evenodd;"/>
+			<text x="706" y="334.0" style="font-family: ReportCJK; font-size: 13px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,668) scale(1,-1)">上下文 / 检索</text>
+			<text x="706" y="311.0" style="font-family: ReportCJK; font-size: 11px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,622) scale(1,-1)">构建 Prompt 与配方候选</text>
+			<rect x="904" y="280" width="204" height="77" rx="5" ry="5" style="stroke: rgb(68%,74%,80%); stroke-linecap: butt; stroke-width: 1; fill: rgb(96%,96%,98%); fill-rule: evenodd;"/>
+			<text x="918" y="334.0" style="font-family: ReportCJK; font-size: 13px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,668) scale(1,-1)">结果校验</text>
+			<text x="918" y="311.0" style="font-family: ReportCJK; font-size: 11px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,622) scale(1,-1)">配方、参数、计划与证据</text>
+			<rect x="692" y="131" width="416" height="102" rx="5" ry="5" style="stroke: rgb(19%,45%,39%); stroke-linecap: butt; stroke-width: 1; fill: rgb(92%,96%,94%); fill-rule: evenodd;"/>
+			<text x="706" y="209.0" style="font-family: ReportCJK; font-size: 14px;fill: rgb(19%,45%,39%); stroke:none;" transform="translate(0,418) scale(1,-1)">ModelService：只接受本会话调用</text>
+			<text x="706" y="186.0" style="font-family: ReportCJK; font-size: 12px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,372) scale(1,-1)">模型配置、流式返回、超时与取消</text>
+			<text x="706" y="167.4" style="font-family: ReportCJK; font-size: 12px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,334) scale(1,-1)">内部适配：本地后端 / 授权云端</text>
+			<path d="M 790,280 L 790,233 Z" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<polygon points="790 233, 786.3058 240.096, 793.6942 240.096" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1; fill: rgb(15%,41%,59%); fill-rule: evenodd;"/>
+			<path d="M 1006,233 L 1006,280 Z" style="stroke: rgb(19%,45%,39%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<polygon points="1006 280, 1009.694 272.904, 1002.306 272.904" style="stroke: rgb(19%,45%,39%); stroke-linecap: butt; stroke-width: 1; fill: rgb(19%,45%,39%); fill-rule: evenodd;"/>
+			<path d="M 300,357 L 420,357 Z" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<polygon points="420 357, 412.904 353.3058, 412.904 360.6942" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1; fill: rgb(15%,41%,59%); fill-rule: evenodd;"/>
+			<text x="340" y="370.0" style="font-family: ReportCJK; font-size: 11px;fill: rgb(15%,41%,59%); stroke:none;" transform="translate(0,740) scale(1,-1)">上下文</text>
+			<path d="M 640,221 L 672,221 Z" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<polygon points="672 221, 664.904 217.3058, 664.904 224.6942" style="stroke: rgb(15%,41%,59%); stroke-linecap: butt; stroke-width: 1; fill: rgb(15%,41%,59%); fill-rule: evenodd;"/>
+			<path d="M 420,220 L 360,220 Z" style="stroke: rgb(19%,45%,39%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<path d="M 360,220 L 360,239 Z" style="stroke: rgb(19%,45%,39%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<path d="M 360,239 L 300,239 Z" style="stroke: rgb(19%,45%,39%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<polygon points="300 239, 307.096 242.6942, 307.096 235.3058" style="stroke: rgb(19%,45%,39%); stroke-linecap: butt; stroke-width: 1; fill: rgb(19%,45%,39%); fill-rule: evenodd;"/>
+			<text x="326" y="189.0" style="font-family: ReportCJK; font-size: 11px;fill: rgb(19%,45%,39%); stroke:none;" transform="translate(0,378) scale(1,-1)">候选命令</text>
+			<text x="20" y="46.0" style="font-family: ReportCJK; font-size: 13px;fill: rgb(9%,20%,28%); stroke:none;" transform="translate(0,92) scale(1,-1)">关键边界：ModelService 不直接访问 PTY；Scheduler 不跨会话编排；命令回显仍由 Shell 侧校验。</text>
+		</g>
+	</g>
+</svg>

@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:aishell:schema:knowledge:common:0.1.0",
+  "$defs": {
+    "id": {"type": "string", "pattern": "^[a-z][a-z0-9._-]{2,127}$"},
+    "revision": {"type": "integer", "minimum": 1},
+    "digest": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "path": {"type": "string", "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))[A-Za-z0-9._/-]+$"},
+    "reference": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "revision"],
+      "properties": {
+        "id": {"$ref": "#/$defs/id"},
+        "revision": {"$ref": "#/$defs/revision"}
+      }
+    },
+    "condition": {
+      "type": "object", "additionalProperties": false,
+      "required": ["fact", "operator", "values", "on_unknown"],
+      "properties": {
+        "fact": {"type": "string", "pattern": "^(os|cpu|abi|shell|runtime|capability)\\.[a-z0-9._-]+$"},
+        "operator": {"enum": ["eq", "in"]},
+        "values": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": ["string", "number", "boolean"]}},
+        "on_unknown": {"const": "need_context"}
+      },
+      "allOf": [{"if": {"properties": {"operator": {"const": "eq"}}}, "then": {"properties": {"values": {"maxItems": 1}}}}]
+    },
+    "applicability": {
+      "type": "object", "additionalProperties": false,
+      "required": ["status", "conditions"],
+      "properties": {
+        "status": {"enum": ["specified", "unknown"]},
+        "conditions": {"type": "array", "items": {"$ref": "#/$defs/condition"}}
+      },
+      "allOf": [
+        {"if": {"properties": {"status": {"const": "specified"}}}, "then": {"properties": {"conditions": {"minItems": 1}}}},
+        {"if": {"properties": {"status": {"const": "unknown"}}}, "then": {"properties": {"conditions": {"maxItems": 0}}}}
+      ]
+    },
+    "environment": {
+      "type": "object", "additionalProperties": false,
+      "required": ["os_family", "os_version", "architecture", "abi", "shell"],
+      "properties": {
+        "os_family": {"type": "string", "minLength": 1},
+        "os_version": {"type": "string", "minLength": 1},
+        "architecture": {"type": "string", "minLength": 1},
+        "abi": {"type": "string", "minLength": 1},
+        "shell": {"type": "string", "minLength": 1}
+      }
+    },
+    "review": {
+      "type": "object", "additionalProperties": false,
+      "required": ["status"],
+      "properties": {
+        "status": {"enum": ["unreviewed", "approved", "rejected"]},
+        "reviewer_id": {"type": "string", "minLength": 1},
+        "reviewed_at": {"type": "string", "format": "date-time"},
+        "record_id": {"type": "string", "minLength": 1}
+      },
+      "allOf": [{"if": {"properties": {"status": {"enum": ["approved", "rejected"]}}}, "then": {"required": ["reviewer_id", "reviewed_at", "record_id"]}}]
+    }
+  }
+}
